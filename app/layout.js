@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +24,53 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <nav className="mt-7 w-full bg-slate-600"> 
+    <ul className="flex w-full bg-green-600">
+      <Link href='/'><li className="flex items-center justify-center absolute left-16 top-3 w-14 h-14 rounded-full bg-yellow-600">Home</li></Link>
+      <li className="flex mx-auto space-x-9 bg-red-600 px-10"><Link href='/contact'><p>Contact</p></Link>
+      <Link href='/my-works/design'>
+      <p>My Works</p></Link></li>
+    </ul>
+   </nav>        
+   {children}
+   <section>
+    <h4>Connect with me</h4>
+    <p>
+    You can connect with me on various
+    social media platforms
+    </p>
+    <div>
+       <Image 
+                 src="/images/twitter.png" 
+                 alt="design 6" 
+                 width={20} 
+                 height={15} 
+               />
+
+      <Image 
+                src="/images/benhance.png" 
+                alt="design 6" 
+                width={20} 
+                height={15} 
+              />
+      <Image 
+                src="/images/linkedin.png" 
+                alt="design 6" 
+                width={20} 
+                height={15} 
+              />
+    </div>
+    <div>
+    <p>Back to the top</p>
+     <Image 
+               src="/images/arrow-up.png" 
+               alt="design 6" 
+               width={20} 
+               height={15} 
+             />
+    </div>
+    
+   </section>
       </body>
     </html>
   );
