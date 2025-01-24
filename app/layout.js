@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <nav className="mt-7 w-full bg-slate-600"> 
     <ul className="flex w-full bg-green-600">
       <Link href='/'><li className="flex items-center justify-center absolute left-16 top-3 w-14 h-14 rounded-full bg-yellow-600">Home</li></Link>
-      <li className="flex mx-auto space-x-9 bg-red-600 px-10"><Link href='/contact'><p>Contact</p></Link>
+      <li className="flex mx-auto space-x-9 bg-gradient-to-r from-rose-100 to-rose-200 shadow-lg rounded-3xl px-8 py-4 justify-around items-center w-96"><Link href='/contact'><p>Contact</p></Link>
       <Link href='/my-works/design'>
       <p>My Works</p></Link></li>
     </ul>

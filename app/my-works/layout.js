@@ -1,12 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MyWorksLayout({ children }) {
     return(
         <div>
           <header>
-          <p>Designs</p>
-          <p>Case Study</p>
-          <p>Projects</p>
+          <Link href="./design">Designs</Link>
+          <Link href="./case-study">Case Study</Link>
+          <Link href="./project">Projects</Link>
           </header>
           <main>{children}</main>
           <footer>
