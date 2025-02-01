@@ -137,7 +137,7 @@ export default function Home() {
           <p>Reach me </p>
           <Image 
           src="/images/diagonal-arrow.png" 
-          alt="design 6" 
+          alt="diagonal arrow" 
           width={20} 
           height={15} 
         />
