@@ -20,19 +20,20 @@ export default function MyWorksLayout({ children }) {
           </header>
           <p className="my-8  bg-[#FFECE7] py-3 px-6">Feel free to explore some of the designs and projects that I have worked on</p>
           <main>{children}</main>
-          <footer>
-              <p>If you are excited with any of my works,
-              fell free to reach out to me.
+          <footer className="flex flex-col justify-center items-center mt-24">
+              <p className="text-lg">If you are excited with any of my works,
               </p>
-              <div className="bg-[#D37157] flex">
-                        <p>Reach me </p>
-                        <Image 
+              <p className="text-lg">fell free to reach out to me.</p>
+               <div className="flex justify-center items-center w-40 bg-[#D37157] hover:bg-[#b85c43] m-auto rounded-lg p-3 mt-7 mb-12 cursor-pointer">
+              <p className="text-lg text-white">Reach Me</p> 
+              <Image 
                         src="/images/diagonal-arrow.png" 
-                        alt="design 6" 
-                        width={20} 
-                        height={15} 
+                        alt="diagonal-arrow" 
+                        width={24} 
+                        height={24} 
+                        className="w-5 h-5"
                       />
-                      </div>
+              </div>
           </footer>
         </div>
       );
