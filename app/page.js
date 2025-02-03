@@ -11,7 +11,7 @@ export default function Home() {
     <h4 className="mt-8 text-[#706d6d]">I partner with clients to turn their innovative ideas into digital successes.
 
 <br />Let’s create something extraordinary.</h4>
-<div className="flex justify-center items-center w-40 bg-[#D37157] m-auto rounded-lg p-3 mt-7">
+<div className="flex justify-center items-center w-40 bg-[#D37157] hover:bg-[#b85c43] m-auto rounded-lg p-3 mt-7 cursor-pointer">
 <p className="text-lg text-white">Reach Me</p> 
 <Image 
           src="/images/diagonal-arrow.png" 
@@ -62,8 +62,8 @@ export default function Home() {
           className="w-[75%] mx-auto" 
         />
       </section>
-      <section className="bg-[#7ab8d9]">
-        <h4>
+      <section className="bg-[#7ab8d9] pt-8">
+        <h4 className="text-center text-xl">
         Checkout some of my designs
         </h4>
         <div className="grid grid-cols-2 gap-y-10">
@@ -112,36 +112,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#D37157]">
-        <h4>
+      <section className="bg-[#D37157] h-[566px] text-white flex flex-col justify-center items-center">
+        <h4 className="text-2xl mb-3">
         Expressions from some of my clients
         </h4>
         <Image 
           src="/images/no-testimony.png" 
           alt="design 6" 
-          width={1282} 
-          height={604} 
-          className="w-full h-auto" 
+          width={300} 
+          height={450} 
+          className="" 
         />
+        <p className="mt-4">No clients review yet</p>
       </section>
-      <section>
-        <h4>
+      <section className="flex flex-col justify-center items-center h-[400px] ">
+        <h4 className="text-xl mt-14 text-gray-600">
         I delight in designing intuitive and productive solutions that
+        </h4>
+        <h4 className="text-xl text-gray-600 mb-14">
         resonate with users.
         </h4>
-        <p>
+        
+        <p className="text-xl font-extrabold">
         LET’S BUILD SOMETHING REMARKABLE
+        </p>
+        <p className="text-2xl mb-12 font-extrabold">
         TOGETHER!
         </p>
-        <div className="bg-[#D37157] flex">
-          <p>Reach me </p>
-          <Image 
+        <div className="flex justify-center items-center w-40 bg-[#D37157] hover:bg-[#b85c43] m-auto rounded-lg p-3 mt-7 cursor-pointer">
+<p className="text-lg text-white">Reach Me</p> 
+<Image 
           src="/images/diagonal-arrow.png" 
-          alt="diagonal arrow" 
-          width={20} 
-          height={15} 
+          alt="diagonal-arrow" 
+          width={24} 
+          height={24} 
+          className="w-5 h-5"
         />
-        </div>
+</div>
       </section>
     </>
   );

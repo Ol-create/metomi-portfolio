@@ -36,8 +36,8 @@ export default function RootLayout({ children }) {
    {children}
    <section className="flex flex-col items-center bg-[#1E1E1E] w-full h-[75vh] text-white">
     <h4 className="font-bold text-3xl mt-14 mb-10">Connect with me</h4>
-    <p className="text-3xl font-thin"> You can connect with me on various </p>
-    <p className="mb-12 text-3xl font-extralight"> social media platforms </p>
+    <p className="text-xl"> You can connect with me on various </p>
+    <p className="mb-12 text-xl"> social media platforms </p>
     <div className="flex  space-x-7">
        <Link href="https://x.com/MET0MI" target="_blank">
        <Image 
