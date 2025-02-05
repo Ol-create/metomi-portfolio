@@ -3,7 +3,7 @@ import React from 'react'
 
 const CaseStudy = () => {
   return (
-    <div>
+    <div className='mx-20 mt-16'>
       <Image 
                   src="/images/case1.jpg" 
                   alt="first image" 
@@ -67,15 +67,18 @@ const CaseStudy = () => {
                   height={604} 
                   className="w-full h-auto" 
                 /> 
-                <div>
+                <div className='mt-20'>
+                <div className='flex items-center justify-center mx-auto hover:bg-orange-400 p-2  rounded-lg cursor-pointer w-60 '>
                     <p>View all on Behance</p>
                     <Image 
-                  src="/images/diagonal-arrow.png" 
+                  src="/images/diagonal-arrow-black.png" 
                   alt="first image" 
                   width={20} 
                   height={20} 
                 /> 
                 </div>
+                </div>
+                
     </div>
   )
 }

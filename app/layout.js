@@ -1,4 +1,5 @@
 "use client"
+import { usePathname } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
@@ -17,6 +18,7 @@ const geistMono = Geist_Mono({
 
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname()
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
@@ -27,9 +29,16 @@ export default function RootLayout({ children }) {
       >
         <nav className="mt-7 w-full"> 
     <ul className="flex w-full">
-      <Link href='/'><li className="flex items-center justify-center absolute left-32 top-7 w-14 h-14 rounded-full bg-[#D37157] text-white font-semibold">Home</li></Link>
-      <li className="flex mx-auto space-x-9 bg-gradient-to-r from-rose-100 to-rose-200 shadow-lg rounded-3xl px-8 py-4 justify-around items-center w-96"><Link href='/contact'><p>Contact</p></Link>
-      <Link href='/my-works/design'>
+      <Link href='/'><li className={`flex items-center justify-center absolute left-32 top-7 w-20 h-20 rounded-full font-semibold hover:bg-[#df856c] ${pathname === "/" ? "bg-[#D37157] text-white" : "bg-[#FFECE7] text-gray-700"}`}>Home</li></Link>
+      <li className="text-gray-700 flex mx-auto space-x-9 bg-gradient-to-r from-rose-100 to-rose-200 shadow-lg rounded-3xl px-8 py-2 justify-around items-center w-[500px]">
+        <Link 
+          href='/contact'
+          className={`text-center w-40 hover:bg-[#df856c]  rounded-lg p-3 cursor-pointer ${pathname.startsWith("/contact") ? "bg-[#D37157] text-white" : " text-gray-700"}`}>
+          <p>Contact</p></Link>
+      <Link 
+        href='/my-works/design'
+        className={`text-center w-40 hover:bg-[#df856c]  rounded-lg p-3 cursor-pointer ${pathname.startsWith("/my-works") ? "bg-[#D37157] text-white" : " text-gray-700"}`}
+      >
       <p>My Works</p></Link></li>
     </ul>
    </nav>        

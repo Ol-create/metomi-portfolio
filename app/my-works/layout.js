@@ -1,22 +1,30 @@
+'use client'
+ 
+import { usePathname } from 'next/navigation'
 import Image from "next/image";
 import Link from "next/link";
 
 export default function MyWorksLayout({ children }) {
+  const navItems = [
+      {name: "Designs", link: "./design", pathname: "/my-works/design"},
+      {name: "Case Study", link: "./case-study", pathname: "/my-works/case-study"},
+      {name: "Projects", link: "./project", pathname: "/my-works/project"}
+  ]
+  const pathname = usePathname()
+  // console.log("path: ", pathname)
     return(
         <div className="flex flex-col items-center">
           <header className="flex w-[560px] justify-center mt-7">
-          <Link href="./design"
-                className="text-center w-40 bg-[#D37157] hover:bg-[#b85c43] m-auto rounded-lg p-3 mt-7 cursor-pointer">
-                  Designs
-          </Link>
-          <Link href="./case-study"
-                className="text-center w-40 bg-[#FFECE7] hover:bg-[#b85c43] m-auto rounded-lg p-3 mt-7 cursor-pointer">
-                  Case Study
-          </Link>
-          <Link href="./project"
-                className="text-center w-40 bg-[#FFECE7] hover:bg-[#b85c43] m-auto rounded-lg p-3 mt-7 cursor-pointer">
-                  Projects
-          </Link>
+          {navItems.map(item => (
+  <Link 
+    href={item.link}
+    className={`text-center w-40 hover:bg-[#df856c] m-auto rounded-lg p-3 mt-7 cursor-pointer ${pathname.startsWith(item.pathname) ? "bg-[#D37157] text-white" : "bg-[#FFECE7] text-gray-700"}`}
+  >
+    {item.name} {console.log("path: ",pathname)}
+  </Link>
+))}
+
+         
           </header>
           <p className="my-8  bg-[#FFECE7] py-3 px-6">Feel free to explore some of the designs and projects that I have worked on</p>
           <main>{children}</main>
